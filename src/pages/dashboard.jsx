@@ -6,6 +6,9 @@ import Disney from ".././asssets/images/disney.png";
 import Hbo from ".././asssets/images/hbo.png";
 import Army from "../asssets/images/army.jpg";
 import Imdb from "../asssets/images/IMDB.png";
+import BookmarkCard from "../components/BookmarkCard.jsx";
+import Kate from "../asssets/images/kate-2021.jpg";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -397,7 +400,7 @@ export default function Dashboard() {
               <p className="mr-1 text-[#77787D] ">See all </p>
               <ArrowRight2 size="14" color="#77787D" />
             </div>
-          </div>{" "}
+          </div>
           <Swiper
             className="w-full mySwiper"
             spaceBetween={20}
@@ -557,6 +560,58 @@ export default function Dashboard() {
               </div>
             </SwiperSlide>
           </Swiper>
+          <div className="flex text-[#fff] justify-between">
+            <h4 className="my-3 font-bold">Top rated</h4>
+            <div className="flex items-center cursor-pointer">
+              <p className="mr-1 text-[#77787D] ">See all </p>
+              <ArrowRight2 size="14" color="#77787D" />
+            </div>
+          </div>
+          <Swiper
+            className="w-full mySwiper"
+            spaceBetween={20}
+            slidesPerView="auto"
+            freeMode={true}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+              },
+              425: {
+                slidesPerView: 1,
+              },
+              640: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 1,
+              },
+              1024: {
+                slidesPerView: 1.5,
+              },
+              1280: {
+                slidesPerView: 2,
+              },
+
+              1536: {
+                slidesPerView: 3.5,
+              },
+            }}
+            // navigation={true}
+            // modules={[Navigation]}
+          >
+            <SwiperSlide>
+              <BookmarkCard name="Kate" date="2021" image={Kate}></BookmarkCard>
+            </SwiperSlide>
+            <SwiperSlide>
+              <BookmarkCard name="Kate" date="2021" image={Kate}></BookmarkCard>
+            </SwiperSlide>
+            <SwiperSlide>
+              <BookmarkCard name="Kate" date="2021" image={Kate}></BookmarkCard>
+            </SwiperSlide>
+            <SwiperSlide>
+              <BookmarkCard name="Kate" date="2021" image={Kate}></BookmarkCard>
+            </SwiperSlide>
+          </Swiper>
         </div>
         <div className="col-span-2 bg-[#1A171E] flex-col p-5">
           <div className="flex items-center">
@@ -681,6 +736,7 @@ export default function Dashboard() {
               <ArrowRight2 size="14" color="#77787D" />
             </div>
           </div>
+          <BookmarkCard name="Kate" date="2021" image={Kate}></BookmarkCard>
         </div>
       </div>
     </>
