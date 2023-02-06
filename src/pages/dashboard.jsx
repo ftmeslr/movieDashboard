@@ -8,6 +8,7 @@ import Army from "../asssets/images/army.jpg";
 import Imdb from "../asssets/images/IMDB.png";
 import BookmarkCard from "../components/BookmarkCard.jsx";
 import Kate from "../asssets/images/kate-2021.jpg";
+import Avatar from "../asssets/images/avatar.jpg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -617,14 +618,14 @@ export default function Dashboard() {
           <div className="flex items-center">
             <img
               className=" h-12 w-12 rounded-full "
-              src={Army}
+              src={Avatar}
               alt="image slide 1"
             />
-            <div className="flex-col">
-              <p className="font-bold">Arman Rokni</p>
-              <p className="">armanrokni@gmail.com</p>
+            <div className="flex-col ml-3">
+              <p className="font-bold text-[#fff]">Arman Rokni</p>
+              <p className=" text-[#8B8D94] text-xs">armanrokni@gmail.com</p>
             </div>
-            <ArrowDown2 size="16" color="#FF8A65" />
+            <ArrowDown2 size="12" color="#fff" />
           </div>
           <div className="relative w-[95%] m-auto mt-5">
             <input
@@ -644,7 +645,7 @@ export default function Dashboard() {
             />
           </div>
 
-          <p className="mt-20">GENRE</p>
+          <p className="mt-20 text-[#95989F] text-xs">GENRE</p>
 
           <Swiper
             className="w-full mySwiper"
