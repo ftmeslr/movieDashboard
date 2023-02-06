@@ -4,7 +4,8 @@ import Hulu from ".././asssets/images/hulu.png";
 import TvPlus from ".././asssets/images/tv.png";
 import Disney from ".././asssets/images/disney.png";
 import Hbo from ".././asssets/images/hbo.png";
-import Army from ".././asssets/images/army.jpg";
+import Army from "../asssets/images/army.jpg";
+import Imdb from "../asssets/images/IMDB.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -25,7 +26,13 @@ import {
   InfoCircle,
   Home,
   Notification,
-  Menu,
+  Element3,
+  ArrowRight2,
+  ArrowDown2,
+  Brodcast,
+  SearchNormal1,
+  Setting4,
+  TickCircle,
 } from "iconsax-react";
 export default function Dashboard() {
   const logos = [Netflix, Hulu, TvPlus, Disney, Hbo];
@@ -369,77 +376,312 @@ export default function Dashboard() {
           </div>
         </div>
         <div
-          className="col-span-7 bg-[#0D0D0F]  "
+          className="col-span-7 bg-[#0D0D0F] px-5  "
           style={{ marginLeft: "-50px" }}
         >
           <div className="tabs py-5 border-b-2 border-gray-800 flex justify-between">
             <ul className="flex text-white">
-              <li className="ml-8">Movies</li>
+              <li className="">Movies</li>
               <li className="ml-8">Series</li>
               <li className="ml-8">Tv Shows</li>
             </ul>
             <div className="icons flex">
-              <Notification size="23" color="#fff" />
-              <Menu className="mx-20" size="23" color="#fff" />
-              <Menu size="23" color="#fff" />
+              <Brodcast size="20" color="#95989F" />
+              <Notification className="mx-7" size="20" color="#95989F" />
+              <Element3 size="20" color="#95989F" variant="Bold" />
             </div>
           </div>
           <div className="flex text-[#fff] justify-between">
-            <h4>Trending Mmovies</h4>
-            <p>See all </p>
+            <h4 className="my-3 font-bold">Trending Movies</h4>
+            <div className="flex items-center cursor-pointer">
+              <p className="mr-1 text-[#77787D] ">See all </p>
+              <ArrowRight2 size="14" color="#77787D" />
+            </div>
           </div>{" "}
           <Swiper
-            className="w-full"
+            className="w-full mySwiper"
             spaceBetween={20}
             slidesPerView="auto"
             freeMode={true}
             breakpoints={{
               320: {
-                slidesPerView: 2,
+                slidesPerView: 1,
               },
               425: {
-                slidesPerView: 2,
+                slidesPerView: 1,
               },
               640: {
-                slidesPerView: 2,
+                slidesPerView: 1,
               },
               768: {
-                slidesPerView: 2,
+                slidesPerView: 1,
               },
               1024: {
-                slidesPerView: 2,
+                slidesPerView: 1.5,
               },
               1280: {
                 slidesPerView: 2,
               },
+
               1536: {
-                slidesPerView: 2,
+                slidesPerView: 2.5,
               },
             }}
             // navigation={true}
             // modules={[Navigation]}
-            // className="mySwiper"
           >
             <SwiperSlide>
-              <div className="w-[450px] h-64 rounded-lg">
+              <div className="w-full h-64 rounded-lg relative">
+                <div className="w-full h-64 bg-gradient-to-t from-neutral-800 to-transparent absolute -z-40 absolute rounded-lg"></div>
                 <img
-                  className="object-fill w-full rounded-lg"
+                  className="h-[250px] w-full rounded-lg absolute -z-50"
                   src={Army}
                   alt="image slide 1"
                 />
-                <p>sldkfhksdjhf</p>
+                <div className="flex items-end h-full justify-between p-5">
+                  <div className="text-[#fff] flex-col">
+                    <p className="font-bold">Army of the dead</p>
+                    <p>2021</p>
+                    <div className="flex items-center">
+                      <img
+                        className="object-fill w-full w-[35px] h-[15px] mr-2 "
+                        src={Imdb}
+                        alt="image slide 1"
+                      />
+                      <p>7.9 Rating</p>
+                    </div>
+                  </div>
+                  <div className="button flex items-center ">
+                    <div className="flex items-center w-[100px] h-[40px] bg-[#e91a23] rounded-full opacity-70 mr-2">
+                      <p className="text-sm m-auto font-semibold text-[#fff] ">
+                        Whatch now
+                      </p>
+                    </div>
+                    <div
+                      className="w-10 h-10 rounded-full bg-[#fff] opacity-20 relative
+                      "
+                    >
+                      <Add
+                        className="m-auto d-block absolute left-0 right-0 bottom-0 top-0 cursor-pointer  "
+                        style={{ opacity: "100% !important" }}
+                        size="24"
+                        color="#111"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                className="object-fill w-full h-96"
-                src={Army}
-                alt="image slide 2"
-              />
+              <div className="w-full h-64 rounded-lg relative">
+                <div className="w-full h-64 bg-gradient-to-t from-neutral-800 to-transparent absolute -z-40 absolute rounded-lg"></div>
+                <img
+                  className=" h-[250px] w-full rounded-lg absolute -z-50"
+                  src={Army}
+                  alt="image slide 1"
+                />
+                <div className="flex items-end h-full justify-between p-5">
+                  <div className="text-[#fff] flex-col">
+                    <p>Army of the dead</p>
+                    <p>2021</p>
+                    <div className="flex items-center">
+                      <img
+                        className="object-fill w-full w-[35px] h-[15px] mr-2 "
+                        src={Imdb}
+                        alt="image slide 1"
+                      />
+                      <p>7.9 Rating</p>
+                    </div>
+                  </div>
+                  <div className="button flex items-center ">
+                    <div className="flex items-center w-[100px] h-[40px] bg-[#e91a23] rounded-full opacity-70 mr-2">
+                      <p className="text-sm m-auto font-semibold text-[#fff] ">
+                        Whatch now
+                      </p>
+                    </div>
+                    <div
+                      className="w-10 h-10 rounded-full bg-[#fff] opacity-20 relative
+                      "
+                    >
+                      <Add
+                        className="m-auto d-block absolute left-0 right-0 bottom-0 top-0 cursor-pointer  "
+                        style={{ opacity: "100% !important" }}
+                        size="24"
+                        color="#111"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-full h-64 rounded-lg relative">
+                <div className="w-full h-64 bg-gradient-to-t from-neutral-800 to-transparent absolute -z-40 absolute rounded-lg"></div>
+                <img
+                  className=" h-[250px] w-full rounded-lg absolute -z-50"
+                  src={Army}
+                  alt="image slide 1"
+                />
+                <div className="flex items-end h-full justify-between p-5">
+                  <div className="text-[#fff] flex-col">
+                    <p>Army of the dead</p>
+                    <p>2021</p>
+                    <div className="flex items-center">
+                      <img
+                        className="object-fill w-full w-[35px] h-[15px] mr-2 "
+                        src={Imdb}
+                        alt="image slide 1"
+                      />
+                      <p>7.9 Rating</p>
+                    </div>
+                  </div>
+                  <div className="button flex items-center ">
+                    <div className="flex items-center w-[100px] h-[40px] bg-[#e91a23] rounded-full opacity-70 mr-2">
+                      <p className="text-sm m-auto font-semibold text-[#fff] ">
+                        Whatch now
+                      </p>
+                    </div>
+                    <div
+                      className="w-10 h-10 rounded-full bg-[#fff] opacity-20 relative
+                      "
+                    >
+                      <Add
+                        className="m-auto d-block absolute left-0 right-0 bottom-0 top-0 cursor-pointer  "
+                        style={{ opacity: "100% !important" }}
+                        size="24"
+                        color="#111"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </SwiperSlide>
           </Swiper>
         </div>
-        <div className="col-span-2 bg-[#1A171E]">03</div>
+        <div className="col-span-2 bg-[#1A171E] flex-col p-5">
+          <div className="flex items-center">
+            <img
+              className=" h-12 w-12 rounded-full "
+              src={Army}
+              alt="image slide 1"
+            />
+            <div className="flex-col">
+              <p className="font-bold">Arman Rokni</p>
+              <p className="">armanrokni@gmail.com</p>
+            </div>
+            <ArrowDown2 size="16" color="#FF8A65" />
+          </div>
+          <div className="relative w-[95%] m-auto mt-5">
+            <input
+              className="absolute -z-99 pl-8 pb-1 rounded-full bg-[#0D0D0F] text-[#fff] h-10 text-xs w-full"
+              type="text"
+              placeholder="search movies"
+            />
+            <SearchNormal1
+              className=" z-10 absolute top-2.5 left-2"
+              size="18"
+              color="#fff"
+            />
+            <Setting4
+              className="z-10 absolute right-5 top-2.5"
+              size="18"
+              color="#fff"
+            />
+          </div>
+
+          <p className="mt-20">GENRE</p>
+
+          <Swiper
+            className="w-full mySwiper"
+            spaceBetween={15}
+            slidesPerView="auto"
+            freeMode={true}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+              },
+              425: {
+                slidesPerView: 1,
+              },
+              640: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 1,
+              },
+              1024: {
+                slidesPerView: 1.5,
+              },
+              1280: {
+                slidesPerView: 1.5,
+              },
+
+              1536: {
+                slidesPerView: 1.5,
+              },
+            }}
+            // navigation={true}
+            // modules={[Navigation]}
+          >
+            <SwiperSlide>
+              <div className="flex-col mt-5 ">
+                <div className="rounded-full px-3 flex items-center justify-between w-full bg-[#0D0D0F] h-[38px] text-[#fff] pl-6 mt-2">
+                  <p className="mb-1">Action</p>
+                  <TickCircle size="20" color="#fff" />
+                </div>
+                <div className="rounded-full px-3 flex items-center justify-between w-full bg-[#0D0D0F] h-[38px] text-[#fff] pl-6 mt-2">
+                  <p className="mb-1">Action</p>
+                  <TickCircle size="20" color="#fff" />
+                </div>
+                <div className="rounded-full px-3 flex items-center justify-between w-full bg-[#0D0D0F] h-[38px] text-[#fff] pl-6 mt-2">
+                  <p className="mb-1">Action</p>
+                  <TickCircle size="20" color="#fff" />
+                </div>
+                <div className="rounded-full px-3 flex items-center justify-between w-full bg-[#0D0D0F] h-[38px] text-[#fff] pl-6 mt-2">
+                  <p className="mb-1">Action</p>
+                  <TickCircle size="20" color="#fff" />
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="flex-col mt-5">
+                <div className="rounded-full px-3 flex items-center justify-between w-full bg-[#0D0D0F] h-[38px] text-[#fff] pl-6 mt-2">
+                  <p className="mb-1">Action</p>
+                  <TickCircle size="20" color="#fff" />
+                </div>
+                <div className="rounded-full px-3 flex items-center justify-between w-full bg-[#0D0D0F] h-[38px] text-[#fff] pl-6 mt-2">
+                  <p className="mb-1">Action</p>
+                  <TickCircle size="20" color="#fff" />
+                </div>
+                <div className="rounded-full px-3 flex items-center justify-between w-full bg-[#0D0D0F] h-[38px] text-[#fff] pl-6 mt-2">
+                  <p className="mb-1">Action</p>
+                  <TickCircle size="20" color="#fff" />
+                </div>
+                <div className="rounded-full px-3 flex items-center justify-between w-full bg-[#0D0D0F] h-[38px] text-[#fff] pl-6 mt-2">
+                  <p className="mb-1">Action</p>
+                  <TickCircle size="20" color="#fff" />
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+          <div className="flex justify-between my-5">
+            <p className="text-[#fff]">Recent Download</p>
+
+            <div className="flex items-center cursor-pointer">
+              <p className="mr-1 text-[#77787D] ">See all </p>
+              <ArrowRight2 size="14" color="#77787D" />
+            </div>
+          </div>
+          <div className="flex justify-between my-5">
+            <p className="text-[#fff]">Bookmarked</p>
+
+            <div className="flex items-center cursor-pointer">
+              <p className="mr-1 text-[#77787D] ">See all </p>
+              <ArrowRight2 size="14" color="#77787D" />
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
