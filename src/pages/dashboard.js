@@ -4,6 +4,13 @@ import Hulu from ".././asssets/images/hulu.png";
 import TvPlus from ".././asssets/images/tv.png";
 import Disney from ".././asssets/images/disney.png";
 import Hbo from ".././asssets/images/hbo.png";
+import Army from ".././asssets/images/army.jpg";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
 
 import {
   Add,
@@ -380,7 +387,57 @@ export default function Dashboard() {
           <div className="flex text-[#fff] justify-between">
             <h4>Trending Mmovies</h4>
             <p>See all </p>
-          </div>
+          </div>{" "}
+          <Swiper
+            className="w-full"
+            spaceBetween={20}
+            slidesPerView="auto"
+            freeMode={true}
+            breakpoints={{
+              320: {
+                slidesPerView: 2,
+              },
+              425: {
+                slidesPerView: 2,
+              },
+              640: {
+                slidesPerView: 2,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 2,
+              },
+              1280: {
+                slidesPerView: 2,
+              },
+              1536: {
+                slidesPerView: 2,
+              },
+            }}
+            // navigation={true}
+            // modules={[Navigation]}
+            // className="mySwiper"
+          >
+            <SwiperSlide>
+              <div className="w-[450px] h-64 rounded-lg">
+                <img
+                  className="object-fill w-full rounded-lg"
+                  src={Army}
+                  alt="image slide 1"
+                />
+                <p>sldkfhksdjhf</p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                className="object-fill w-full h-96"
+                src={Army}
+                alt="image slide 2"
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
         <div className="col-span-2 bg-[#1A171E]">03</div>
       </div>
