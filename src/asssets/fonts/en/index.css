@@ -1,0 +1,80 @@
+﻿@font-face {
+	font-family: dana-en;
+	font-style: normal;
+	font-weight: 10;
+	src: url('dana-thin.eot');
+	src: url('dana-thin.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-thin.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana-en;
+	font-style: normal;
+	font-weight: 200;
+	src: url('dana-extralight.eot');
+	src: url('dana-extralight.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-extralight.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana-en;
+	font-style: normal;
+	font-weight: 300;
+	src: url('dana-light.eot');
+	src: url('dana-light.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-light.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana-en;
+	font-style: normal;
+	font-weight: 500;
+	src: url('dana-medium.eot');
+	src: url('dana-medium.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-medium.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana-en;
+	font-style: normal;
+	font-weight: 600;
+	src: url('dana-demibold.eot');
+	src: url('dana-demibold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-demibold.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana-en;
+	font-style: normal;
+	font-weight: 750;
+	src: url('dana-ultrabold.eot');
+	src: url('dana-ultrabold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-ultrabold.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana-en;
+	font-style: normal;
+	font-weight: 800;
+	src: url('dana-extrabold.eot');
+	src: url('dana-extrabold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-extrabold.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana-en;
+	font-style: normal;
+	font-weight: 900;
+	src: url('dana-black.eot');
+	src: url('dana-black.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-black.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana-en;
+	font-style: normal;
+	font-weight: bold;
+	src: url('dana-bold.eot');
+	src: url('dana-bold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-bold.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana-en;
+	font-style: normal;
+	font-weight: normal;
+	src: url('dana-regular.eot');
+	src: url('dana-regular.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-regular.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}

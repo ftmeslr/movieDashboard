@@ -39,9 +39,11 @@ export default function Dashboard() {
     i18n.changeLanguage(e.target.value);
   };
 
+  document.body.dir = i18n.dir();
+
   return (
     <>
-      <div className="grid grid-cols-12 flex-row bg-red-200  ">
+      <div className="grid grid-cols-12 flex-row bg-red-200 font-dana ">
         <div className="col-span-3 flex bg-gray-200 dark:bg-[#0d0d0f] h-screen">
           <MiniSideBar logos={logos} Add={Add}></MiniSideBar>
 
@@ -226,7 +228,7 @@ export default function Dashboard() {
             />
           </div>
 
-          <p className="mt-20 text-[#95989F] text-xs">{t("GENRE")}</p>
+          <p className="mt-20 text-[#95989F] text-xs ">{t("GENRE")}</p>
 
           <Swiper
             className="w-full mySwiper"

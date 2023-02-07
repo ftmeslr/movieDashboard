@@ -12,6 +12,10 @@ i18n
     interpolation: {
       escapeValue: false,
     },
+    // locales: [
+    //   { code: "fa", name: "fa", dir: "ltr" },
+    //   { code: "en", name: "en", dir: "ltr" },
+    // ],
   });
 
 export default i18n;

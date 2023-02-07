@@ -1,0 +1,206 @@
+﻿/**
+*
+*	Name:			DANA Fonts
+*	Version:			1.0
+*	Author:			Moslem Ebrahimi (moslemebrahimi.com)
+*	Created on:		May 22, 2019
+*	Updated on:		May 22, 2019
+*	Website:			http://fontiran.com
+*	Copyright:		Commercial/Proprietary Software
+--------------------------------------------------------------------------------------
+فونت دانا یک نرم افزار مالکیتی محسوب می شود. جهت آگاهی از قوانین استفاده از این فونت‌ها لطفا به وب سایت (فونت ایران دات کام) مراجعه نمایید
+--------------------------------------------------------------------------------------
+DANA fonts are considered a proprietary software. To gain information contact the laws regarding the use of these fonts, please visit www.fontiran.com
+--------------------------------------------------------------------------------------
+This set of fonts are used in this project under the license: (.....)
+------------------------------------------------------------------------------------- fonts/-
+*
+**/
+
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 10;
+	src: url('dana-fanum-thin.eot');
+	src: url('dana-fanum-thin.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-fanum-thin.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('dana-fanum-thin.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 200;
+	src: url('dana-fanum-extralight.eot');
+	src: url('dana-fanum-extralight.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-fanum-extralight.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('dana-fanum-extralight.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 300;
+	src: url('dana-fanum-light.eot');
+	src: url('dana-fanum-light.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-fanum-light.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('dana-fanum-light.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 500;
+	src: url('dana-fanum-medium.eot');
+	src: url('dana-fanum-medium.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-fanum-medium.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('dana-fanum-medium.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 600;
+	src: url('dana-fanum-demibold.eot');
+	src: url('dana-fanum-demibold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-fanum-demibold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('dana-fanum-demibold.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 750;
+	src: url('dana-fanum-ultrabold.eot');
+	src: url('dana-fanum-ultrabold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-fanum-ultrabold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('dana-fanum-ultrabold.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 800;
+	src: url('dana-fanum-extrabold.eot');
+	src: url('dana-fanum-extrabold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-fanum-extrabold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('dana-fanum-extrabold.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: 900;
+	src: url('dana-fanum-black.eot');
+	src: url('dana-fanum-black.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-fanum-black.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('dana-fanum-black.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: bold;
+	src: url('dana-fanum-bold.eot');
+	src: url('dana-fanum-bold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-fanum-bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('dana-fanum-bold.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: normal;
+	font-weight: normal;
+	src: url('dana-fanum-regular.eot');
+	src: url('dana-fanum-regular.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-fanum-regular.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('dana-fanum-regular.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+
+/**
+Iranic fonts
+**/
+
+
+@font-face {
+	font-family: dana;
+	font-style: italic;
+	font-weight: 10;
+	src: url('dana-fanum-thinitalic.eot');
+	src: url('dana-fanum-thinitalic.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-fanum-thinitalic.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('dana-fanum-thinitalic.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: italic;
+	font-weight: 200;
+	src: url('dana-fanum-extralightitalic.eot');
+	src: url('dana-fanum-extralightitalic.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-fanum-extralightitalic.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('dana-fanum-extralightitalic.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: italic;
+	font-weight: 300;
+	src: url('dana-fanum-lightitalic.eot');
+	src: url('dana-fanum-lightitalic.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-fanum-lightitalic.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('dana-fanum-lightitalic.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: italic;
+	font-weight: 500;
+	src: url('dana-fanum-mediumitalic.eot');
+	src: url('dana-fanum-mediumitalic.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-fanum-mediumitalic.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('dana-fanum-mediumitalic.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: italic;
+	font-weight: 600;
+	src: url('dana-fanum-demibolditalic.eot');
+	src: url('dana-fanum-demibolditalic.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-fanum-demibolditalic.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('dana-fanum-demibolditalic.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: italic;
+	font-weight: 750;
+	src: url('dana-fanum-ultrabolditalic.eot');
+	src: url('dana-fanum-ultrabolditalic.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-fanum-ultrabolditalic.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('dana-fanum-ultrabolditalic.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: italic;
+	font-weight: 800;
+	src: url('dana-fanum-extrabolditalic.eot');
+	src: url('dana-fanum-extrabolditalic.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-fanum-extrabolditalic.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('dana-fanum-extrabolditalic.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: italic;
+	font-weight: 900;
+	src: url('dana-fanum-blackitalic.eot');
+	src: url('dana-fanum-blackitalic.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-fanum-blackitalic.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('dana-fanum-blackitalic.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: italic;
+	font-weight: bold;
+	src: url('dana-fanum-bolditalic.eot');
+	src: url('dana-fanum-bolditalic.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-fanum-bolditalic.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('dana-fanum-bolditalic.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+	font-family: dana;
+	font-style: italic;
+	font-weight: normal;
+	src: url('dana-fanum-regularitalic.eot');
+	src: url('dana-fanum-regularitalic.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+		 url('dana-fanum-regularitalic.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+		 url('dana-fanum-regularitalic.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
