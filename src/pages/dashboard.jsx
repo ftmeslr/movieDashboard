@@ -9,7 +9,8 @@ import Imdb from "../asssets/images/IMDB.png";
 import BookmarkCard from "../components/BookmarkCard.jsx";
 import Kate from "../asssets/images/kate-2021.jpg";
 import Avatar from "../asssets/images/avatar.jpg";
-
+import i18next from "../helpers/i18n";
+import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -42,6 +43,7 @@ export default function Dashboard() {
   const logos = [Netflix, Hulu, TvPlus, Disney, Hbo];
   const [activeLogo, setActiveLogo] = useState(Netflix);
   const [activeMenue, setActiveMenue] = useState("Home");
+  const { t, i18n } = useTranslation();
   const handleDragStart = (e) => e.preventDefault();
   const items = [
     <img src="path-to-img" onDragStart={handleDragStart} role="presentation" />,
@@ -49,8 +51,19 @@ export default function Dashboard() {
     <img src="path-to-img" onDragStart={handleDragStart} role="presentation" />,
   ];
 
+  const changeLanguge = (e) => {
+    i18n.changeLanguage(e.target.value);
+  };
+
   return (
     <>
+      <div>
+        <h1>{t("hello")}</h1>
+        <select onChange={changeLanguge}>
+          <option value="fa">farsi</option>
+          <option value="en">english</option>
+        </select>
+      </div>
       <div className="grid grid-cols-12 flex-row bg-red-200">
         <div className="col-span-3 flex bg-[#0d0d0f] h-screen">
           <div className="w-20 mt-20">
