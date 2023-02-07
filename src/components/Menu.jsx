@@ -19,7 +19,7 @@ const Menue = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="bg-[#1a171e] grow text-zinc-700 px-5 max-w-[250px] ">
+    <div className=" bg-gray-300 dark:bg-[#1a171e] grow text-zinc-700 px-5 max-w-[250px] ">
       <div className="mt-20">
         <p className="text-xs">MENU</p>
         <ul>
