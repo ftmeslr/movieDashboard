@@ -121,7 +121,7 @@ export default function Dashboard() {
                       activeMenue === "Home" ? "font-normal text-slate-50 " : ""
                     }`}
                   >
-                    Home
+                    {t("Home")}
                   </span>
                 </li>
                 <li
@@ -150,7 +150,7 @@ export default function Dashboard() {
                         : ""
                     }`}
                   >
-                    Discovery
+                    {t("Discovery")}
                   </span>
                 </li>
                 <li
@@ -179,7 +179,7 @@ export default function Dashboard() {
                         : ""
                     }`}
                   >
-                    Community
+                    {t("Community")}
                   </span>
                 </li>
                 <li
@@ -209,7 +209,7 @@ export default function Dashboard() {
                           : ""
                       }`}
                     >
-                      ComingSoon
+                      {t("ComingSoon")}
                     </span>
                   </div>
                   <div className="w-6 h-6 rounded-full bg-[#e91a23] ml-2 mr-2 px-2">
@@ -244,7 +244,7 @@ export default function Dashboard() {
                         : ""
                     }`}
                   >
-                    Recent
+                    {t("Recent")}
                   </span>
                 </li>
                 <li
@@ -273,7 +273,7 @@ export default function Dashboard() {
                         : ""
                     }`}
                   >
-                    Bookmarked
+                    {t("Bookmarked")}
                   </span>
                 </li>
                 <li
@@ -302,7 +302,7 @@ export default function Dashboard() {
                         : ""
                     }`}
                   >
-                    Top rated
+                    {t("Top rated")}
                   </span>
                 </li>
 
@@ -332,7 +332,7 @@ export default function Dashboard() {
                         : ""
                     }`}
                   >
-                    Downloaded
+                    {t("Downloaded")}
                   </span>
                 </li>
               </ul>
@@ -362,7 +362,7 @@ export default function Dashboard() {
                         : ""
                     }`}
                   >
-                    Setting
+                    {t("Setting")}
                   </span>
                 </li>
                 <li
@@ -385,7 +385,7 @@ export default function Dashboard() {
                       activeMenue === "Help" ? "font-normal text-slate-50" : ""
                     }`}
                   >
-                    Help
+                    {t("Help")}
                   </span>
                 </li>
               </ul>
@@ -398,9 +398,9 @@ export default function Dashboard() {
         >
           <div className="tabs py-5 border-b-2 border-gray-800 flex justify-between">
             <ul className="flex text-white">
-              <li className="">Movies</li>
-              <li className="ml-8">Series</li>
-              <li className="ml-8">Tv Shows</li>
+              <li className="">{t("Movies")}</li>
+              <li className="ml-8">{t("Series")}</li>
+              <li className="ml-8">{t("Tv Shows")}</li>
             </ul>
             <div className="icons flex">
               <Brodcast size="20" color="#95989F" />
@@ -409,9 +409,9 @@ export default function Dashboard() {
             </div>
           </div>
           <div className="flex text-[#fff] justify-between">
-            <h4 className="my-3 font-bold">Trending Movies</h4>
+            <h4 className="my-3 font-bold">{t("Trending Movies")}</h4>
             <div className="flex items-center cursor-pointer">
-              <p className="mr-1 text-[#77787D] ">See all </p>
+              <p className="mr-1 text-[#77787D] ">{t("See all")} </p>
               <ArrowRight2 size="14" color="#77787D" />
             </div>
           </div>
@@ -575,9 +575,9 @@ export default function Dashboard() {
             </SwiperSlide>
           </Swiper>
           <div className="flex text-[#fff] justify-between">
-            <h4 className="my-3 font-bold">Top rated</h4>
+            <h4 className="my-3 font-bold">{t("Top rated")}</h4>
             <div className="flex items-center cursor-pointer">
-              <p className="mr-1 text-[#77787D] ">See all </p>
+              <p className="mr-1 text-[#77787D] ">{t("See all")} </p>
               <ArrowRight2 size="14" color="#77787D" />
             </div>
           </div>
@@ -658,7 +658,7 @@ export default function Dashboard() {
             />
           </div>
 
-          <p className="mt-20 text-[#95989F] text-xs">GENRE</p>
+          <p className="mt-20 text-[#95989F] text-xs">{t("GENRE")}</p>
 
           <Swiper
             className="w-full mySwiper"
@@ -735,18 +735,18 @@ export default function Dashboard() {
             </SwiperSlide>
           </Swiper>
           <div className="flex justify-between my-5">
-            <p className="text-[#fff]">Recent Download</p>
+            <p className="text-[#fff]">{t("Recent Download")}</p>
 
             <div className="flex items-center cursor-pointer">
-              <p className="mr-1 text-[#77787D] ">See all </p>
+              <p className="mr-1 text-[#77787D] ">{t("See all")} </p>
               <ArrowRight2 size="14" color="#77787D" />
             </div>
           </div>
           <div className="flex justify-between my-5">
-            <p className="text-[#fff]">Bookmarked</p>
+            <p className="text-[#fff]">{t("Bookmarked")}</p>
 
             <div className="flex items-center cursor-pointer">
-              <p className="mr-1 text-[#77787D] ">See all </p>
+              <p className="mr-1 text-[#77787D] ">{t("See all")} </p>
               <ArrowRight2 size="14" color="#77787D" />
             </div>
           </div>

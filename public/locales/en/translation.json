@@ -1,1 +1,21 @@
-{ "hello": "hello" }
+{
+  "Home": "Home",
+  "Discovery": "Discovery",
+  "Community": "Community",
+  "ComingSoon": "ComingSoon",
+  "Recent": "Recent",
+  "Bookmarked": "Bookmarked",
+  "Downloaded": "Downloaded",
+  "Setting": "Setting ",
+  "Help": "Help ",
+  "Trending Movies": "Trending Movies",
+  "Top rated": "Top rated",
+  "Movies": "Movies",
+  "Series": "Series",
+  "Tv Shows": "Tv Shows",
+  "See all ": "See all",
+  "Action": "Action",
+  "Recent Download": "Recent Download",
+  "GENRE" : "GENRE"
+  
+}

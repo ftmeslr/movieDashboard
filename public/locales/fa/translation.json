@@ -1,3 +1,20 @@
 {
-  "hello": "سلام"
+  "Home": "صفحه اصلی",
+  "Discovery": "کشف",
+  "Community": "انجمن",
+  "ComingSoon": "به زودی",
+  "Recent": "اخیرا",
+  "Bookmarked": "نشان شده",
+  "Downloaded": "دانلود شده ",
+  "Setting": "تنظیمات ",
+  "Help": "اطلاعات ",
+  "Trending Movies": "ترند شده ",
+  "Top rated": "بیشترین امتیاز",
+  "Movies": "فیلم ها ",
+  "Series": "سریال ها ",
+  "Tv Shows": "برنامه تلوزیونی",
+  "See all": "مشاهده همه",
+  "Action": "عمل",
+  "Recent Download": "دانلود های اخییر",
+  "GENRE": "ژانر"
 }
