@@ -90,8 +90,8 @@ export default function Dashboard() {
   console.log(activeTag);
   return (
     <>
-      <div className="grid grid-cols-12 flex-row bg-red-200 font-dana ">
-        <div className="col-span-3 flex bg-gray-200 dark:bg-[#0d0d0f] h-screen">
+      <div className="grid grid-cols-12 flex-row bg-red-200 font-dana  ">
+        <div className="col-span-3 flex bg-gray-200 dark:bg-[#0d0d0f] h-auto">
           <MiniSideBar logos={logos} dir={dir}></MiniSideBar>
           <Menu dir={dir}></Menu>
         </div>
