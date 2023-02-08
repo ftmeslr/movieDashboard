@@ -6,7 +6,7 @@ const MiniSideBar = ({ logos, dir }) => {
   return (
     <div className="w-20 mt-20">
       {logos.map((item, index) => (
-        <div className={`w-full relative `}>
+        <div key={index} className={`w-full relative `}>
           <div
             className={`absolute bg-[#e40712] w-1 h-12  ${
               activeLogo === item ? "" : "hidden"

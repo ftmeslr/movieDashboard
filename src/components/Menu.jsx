@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { clsx } from "clsx";
+
 import {
   Clock,
   LocationDiscover,
@@ -14,9 +15,9 @@ import {
   Home,
 } from "iconsax-react";
 
-const Menue = ({ dir }) => {
+const Menue = () => {
   const [activeMenue, setActiveMenue] = useState("Home");
-
+  const { t } = useTranslation();
   const iconList = [
     <Home
       size="18"
@@ -86,11 +87,11 @@ const Menue = ({ dir }) => {
   return (
     <div className=" bg-gray-300 dark:bg-[#1a171e] grow text-zinc-700 px-5 max-w-[250px] ">
       <div className="mt-20">
-        <p className="text-xs">MENU</p>
+        <p className="text-xs">{t("MENU")}</p>
         <ul>
           {menueItems.map((item, index) => {
             return (
-              <>
+              <div key={index}>
                 <MenueItem
                   title={item}
                   activeMenue={activeMenue}
@@ -107,9 +108,9 @@ const Menue = ({ dir }) => {
                     index === 3 ? "-mb-3" : "hidden"
                   } `}
                 >
-                  LIBRARY
+                  {t("LIBRARY")}
                 </p>
-              </>
+              </div>
             );
           })}
         </ul>

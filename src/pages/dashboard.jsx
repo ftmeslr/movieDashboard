@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Netflix from ".././asssets/images/netflix.png";
 import Hulu from ".././asssets/images/hulu.png";
 import TvPlus from ".././asssets/images/tv.png";
@@ -7,37 +6,18 @@ import Hbo from ".././asssets/images/hbo.png";
 import BookmarkCard from "../components/BookmarkCard.jsx";
 import Kate from "../asssets/images/kate-2021.jpg";
 import Avatar from "../asssets/images/avatar.jpg";
-import i18next from "../helpers/i18n";
 import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import MiniSideBar from "../components/MiniSideBar.jsx";
 import Menu from "../components/Menu.jsx";
 import MovieCard from "../components/MovieCard.jsx";
-import Switcher from "../components/Switcher.jsx";
-// Import Swiper styles
+import Navbar from "../components/Navbar.jsx";
+import Title from "../components/Title.jsx";
 import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper";
-
-import {
-  Notification,
-  Element3,
-  ArrowRight2,
-  ArrowDown2,
-  Brodcast,
-  SearchNormal1,
-  Setting4,
-  TickCircle,
-} from "iconsax-react";
+import { ArrowDown2, SearchNormal1, Setting4, TickCircle } from "iconsax-react";
 export default function Dashboard() {
   const logos = [Netflix, Hulu, TvPlus, Disney, Hbo];
-
   const { t, i18n } = useTranslation();
-
-  const changeLanguge = (e) => {
-    i18n.changeLanguage(e.target.value);
-  };
-
   document.body.dir = i18n.dir();
   const dir = i18n.dir();
 
@@ -46,7 +26,6 @@ export default function Dashboard() {
       <div className="grid grid-cols-12 flex-row bg-red-200 font-dana ">
         <div className="col-span-3 flex bg-gray-200 dark:bg-[#0d0d0f] h-screen">
           <MiniSideBar logos={logos} dir={dir}></MiniSideBar>
-
           <Menu dir={dir}></Menu>
         </div>
         <div
@@ -54,55 +33,8 @@ export default function Dashboard() {
             dir === "ltr" ? "-ml-12" : "-mr-12"
           }`}
         >
-          <div className="tabs py-5 border-b-2 border-gray-800 flex justify-between">
-            <ul className="flex dark:text-white">
-              <li className="">{t("Movies")}</li>
-              <li className="ml-8">{t("Series")}</li>
-              <li className="ml-8">{t("Tv Shows")}</li>
-            </ul>
-            <div className="icons flex  items-center">
-              <div className="mr-6">
-                <div className="flex justify-center">
-                  <div className=" xl:w-18">
-                    <select
-                      onChange={changeLanguge}
-                      className="form-select appearance-none
-                                block
-                                w-full
-                                px-3
-                                py-1.5
-                                text-base
-                                font-normal
-                                text-[#fff]
-                                bg-stone-700
-                                border border-solid border-gray-300
-                                rounded
-                                transition
-                                ease-in-out
-                                m-0
-                                focus: focus:outline-none"
-                      aria-label="Default select example"
-                    >
-                      <option value="fa">Fa</option>
-                      <option value="en">En</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <Switcher />
-
-              <Brodcast size="20" color="#95989F" />
-              <Notification className="mx-7" size="20" color="#95989F" />
-              <Element3 size="20" color="#95989F" variant="Bold" />
-            </div>
-          </div>
-          <div className="flex dark:text-[#fff] justify-between">
-            <h4 className="my-3 font-bold">{t("Trending Movies")}</h4>
-            <div className="flex items-center cursor-pointer">
-              <p className="mr-1 text-[#77787D] ">{t("See all")} </p>
-              <ArrowRight2 size="14" color="#77787D" />
-            </div>
-          </div>
+          <Navbar dir={dir}></Navbar>
+          <Title title="Trending Movies" dir={dir}></Title>
           <Swiper
             className="w-full mySwiper"
             spaceBetween={20}
@@ -132,8 +64,6 @@ export default function Dashboard() {
                 slidesPerView: 2.5,
               },
             }}
-            // navigation={true}
-            // modules={[Navigation]}
           >
             <SwiperSlide>
               <MovieCard></MovieCard>
@@ -145,13 +75,9 @@ export default function Dashboard() {
               <MovieCard></MovieCard>
             </SwiperSlide>
           </Swiper>
-          <div className="flex dark:text-[#fff] justify-between">
-            <h4 className="my-3 font-bold">{t("Top rated")}</h4>
-            <div className="flex items-center cursor-pointer">
-              <p className="mr-1 text-[#77787D] ">{t("See all")} </p>
-              <ArrowRight2 size="14" color="#77787D" />
-            </div>
-          </div>
+
+          <Title title="Top rated" dir={dir}></Title>
+
           <Swiper
             className="w-full mySwiper"
             spaceBetween={20}
@@ -181,8 +107,6 @@ export default function Dashboard() {
                 slidesPerView: 3.5,
               },
             }}
-            // navigation={true}
-            // modules={[Navigation]}
           >
             <SwiperSlide>
               <BookmarkCard name="Kate" date="2021" image={Kate}></BookmarkCard>
@@ -260,8 +184,6 @@ export default function Dashboard() {
                 slidesPerView: 1.5,
               },
             }}
-            // navigation={true}
-            // modules={[Navigation]}
           >
             <SwiperSlide>
               <div className="flex-col mt-5 ">
@@ -305,22 +227,9 @@ export default function Dashboard() {
               </div>
             </SwiperSlide>
           </Swiper>
-          <div className="flex justify-between my-5">
-            <p className="dark:text-[#fff]">{t("Recent Download")}</p>
+          <Title title="Recent Download" dir={dir}></Title>
+          <Title title="Bookmarked" dir={dir}></Title>
 
-            <div className="flex items-center cursor-pointer">
-              <p className="mr-1 text-[#77787D] ">{t("See all")} </p>
-              <ArrowRight2 size="14" color="#77787D" />
-            </div>
-          </div>
-          <div className="flex justify-between my-5">
-            <p className="dark:text-[#fff]">{t("Bookmarked")}</p>
-
-            <div className="flex items-center cursor-pointer">
-              <p className="mr-1 text-[#77787D] ">{t("See all")} </p>
-              <ArrowRight2 size="14" color="#77787D" />
-            </div>
-          </div>
           <BookmarkCard name="Kate" date="2021" image={Kate}></BookmarkCard>
         </div>
       </div>
