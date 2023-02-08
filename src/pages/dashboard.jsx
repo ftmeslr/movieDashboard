@@ -13,8 +13,9 @@ import Menu from "../components/Menu.jsx";
 import MovieCard from "../components/MovieCard.jsx";
 import Navbar from "../components/Navbar.jsx";
 import Title from "../components/Title.jsx";
+import SearchInput from "../components/SearchInput.jsx";
 import "swiper/css";
-import { ArrowDown2, SearchNormal1, Setting4, TickCircle } from "iconsax-react";
+import { ArrowDown2, TickCircle } from "iconsax-react";
 export default function Dashboard() {
   const logos = [Netflix, Hulu, TvPlus, Disney, Hbo];
   const trendingMovie = [
@@ -157,24 +158,8 @@ export default function Dashboard() {
             </div>
             <ArrowDown2 size="12" color="#fff" />
           </div>
-          <div className="relative w-[95%] m-auto mt-5">
-            <input
-              className="absolute -z-99 pl-8 pb-1 rounded-full bg-gray-200 dark:bg-[#0d0d0f] dark:text-[#fff] h-10 text-xs w-full"
-              type="text"
-              placeholder="search movies"
-            />
-            <SearchNormal1
-              className=" z-10 absolute top-2.5 left-2"
-              size="18"
-              color="#fff"
-            />
-            <Setting4
-              className="z-10 absolute right-5 top-2.5"
-              size="18"
-              color="#fff"
-            />
-          </div>
 
+          <SearchInput dir={dir} />
           <p className="mt-20 text-[#95989F] text-xs ">{t("GENRE")}</p>
 
           <Swiper
