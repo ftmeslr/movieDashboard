@@ -1,14 +1,19 @@
 import { useState } from "react";
-const MiniSideBar = ({ logos, Add }) => {
+
+import { Add } from "iconsax-react";
+const MiniSideBar = ({ logos, dir }) => {
   const [activeLogo, setActiveLogo] = useState(logos[0]);
   return (
     <div className="w-20 mt-20">
       {logos.map((item, index) => (
         <div className={`w-full relative `}>
           <div
-            className={`absolute bg-[#e40712] w-1 h-12 rounded-r-lg ${
+            className={`absolute bg-[#e40712] w-1 h-12  ${
               activeLogo === item ? "" : "hidden"
-            }`}
+            }
+            ${dir === "ltr" ? "rounded-r-lg" : "rounded-l-lg "}
+            
+            `}
           ></div>
           <div
             key={index}

@@ -20,7 +20,6 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 
 import {
-  Add,
   Notification,
   Element3,
   ArrowRight2,
@@ -40,18 +39,20 @@ export default function Dashboard() {
   };
 
   document.body.dir = i18n.dir();
+  const dir = i18n.dir();
 
   return (
     <>
       <div className="grid grid-cols-12 flex-row bg-red-200 font-dana ">
         <div className="col-span-3 flex bg-gray-200 dark:bg-[#0d0d0f] h-screen">
-          <MiniSideBar logos={logos} Add={Add}></MiniSideBar>
+          <MiniSideBar logos={logos} dir={dir}></MiniSideBar>
 
-          <Menu />
+          <Menu dir={dir}></Menu>
         </div>
         <div
-          className="col-span-7 bg-gray-200 dark:bg-[#0d0d0f]  px-5  "
-          style={{ marginLeft: "-50px" }}
+          className={`col-span-7 bg-gray-200 dark:bg-[#0d0d0f] px-5 ${
+            dir === "ltr" ? "-ml-12" : "-mr-12"
+          }`}
         >
           <div className="tabs py-5 border-b-2 border-gray-800 flex justify-between">
             <ul className="flex dark:text-white">
