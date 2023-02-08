@@ -66,13 +66,13 @@ export default function Dashboard() {
             }}
           >
             <SwiperSlide>
-              <MovieCard></MovieCard>
+              <MovieCard dir={dir}></MovieCard>
             </SwiperSlide>
             <SwiperSlide>
-              <MovieCard></MovieCard>
+              <MovieCard dir={dir}></MovieCard>
             </SwiperSlide>
             <SwiperSlide>
-              <MovieCard></MovieCard>
+              <MovieCard dir={dir}></MovieCard>
             </SwiperSlide>
           </Swiper>
 
@@ -109,16 +109,36 @@ export default function Dashboard() {
             }}
           >
             <SwiperSlide>
-              <BookmarkCard name="Kate" date="2021" image={Kate}></BookmarkCard>
+              <BookmarkCard
+                name="Kate"
+                date="2021"
+                image={Kate}
+                dir={dir}
+              ></BookmarkCard>
             </SwiperSlide>
             <SwiperSlide>
-              <BookmarkCard name="Kate" date="2021" image={Kate}></BookmarkCard>
+              <BookmarkCard
+                name="Kate"
+                date="2021"
+                image={Kate}
+                dir={dir}
+              ></BookmarkCard>
             </SwiperSlide>
             <SwiperSlide>
-              <BookmarkCard name="Kate" date="2021" image={Kate}></BookmarkCard>
+              <BookmarkCard
+                name="Kate"
+                date="2021"
+                image={Kate}
+                dir={dir}
+              ></BookmarkCard>
             </SwiperSlide>
             <SwiperSlide>
-              <BookmarkCard name="Kate" date="2021" image={Kate}></BookmarkCard>
+              <BookmarkCard
+                name="Kate"
+                date="2021"
+                image={Kate}
+                dir={dir}
+              ></BookmarkCard>
             </SwiperSlide>
           </Swiper>
         </div>
