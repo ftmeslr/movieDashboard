@@ -17,6 +17,55 @@ import "swiper/css";
 import { ArrowDown2, SearchNormal1, Setting4, TickCircle } from "iconsax-react";
 export default function Dashboard() {
   const logos = [Netflix, Hulu, TvPlus, Disney, Hbo];
+  const trendingMovie = [
+    {
+      name: "Army of the dead",
+      date: "2021",
+      rate: "7.9",
+    },
+    {
+      name: "Gunpowder milkshake",
+      date: "2021",
+      rate: "7.5",
+    },
+    {
+      name: "Army of the dead",
+      date: "2023",
+      rate: "7.9",
+    },
+  ];
+  const TopRatedMovie = [
+    {
+      name: "Extraction",
+      date: "2021",
+      rate: "7.9",
+      image: Kate,
+    },
+    {
+      name: "Mosul",
+      date: "2019",
+      rate: "7.1",
+      image: Kate,
+    },
+    {
+      name: "Spider man",
+      date: "2017",
+      rate: "7.9",
+      image: Kate,
+    },
+    {
+      name: "Bright",
+      date: "2017",
+      rate: "7.0",
+      image: Kate,
+    },
+    {
+      name: "Extraction",
+      date: "2021",
+      rate: "7.9",
+      image: Kate,
+    },
+  ];
   const { t, i18n } = useTranslation();
   document.body.dir = i18n.dir();
   const dir = i18n.dir();
@@ -41,15 +90,6 @@ export default function Dashboard() {
             slidesPerView="auto"
             freeMode={true}
             breakpoints={{
-              320: {
-                slidesPerView: 1,
-              },
-              425: {
-                slidesPerView: 1,
-              },
-              640: {
-                slidesPerView: 1,
-              },
               768: {
                 slidesPerView: 1,
               },
@@ -65,34 +105,21 @@ export default function Dashboard() {
               },
             }}
           >
-            <SwiperSlide>
-              <MovieCard dir={dir}></MovieCard>
-            </SwiperSlide>
-            <SwiperSlide>
-              <MovieCard dir={dir}></MovieCard>
-            </SwiperSlide>
-            <SwiperSlide>
-              <MovieCard dir={dir}></MovieCard>
-            </SwiperSlide>
+            {trendingMovie.map((item, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <MovieCard props={item} dir={dir}></MovieCard>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
-
           <Title title="Top rated" dir={dir}></Title>
-
           <Swiper
             className="w-full mySwiper"
             spaceBetween={20}
             slidesPerView="auto"
             freeMode={true}
             breakpoints={{
-              320: {
-                slidesPerView: 1,
-              },
-              425: {
-                slidesPerView: 1,
-              },
-              640: {
-                slidesPerView: 1,
-              },
               768: {
                 slidesPerView: 1,
               },
@@ -108,38 +135,13 @@ export default function Dashboard() {
               },
             }}
           >
-            <SwiperSlide>
-              <BookmarkCard
-                name="Kate"
-                date="2021"
-                image={Kate}
-                dir={dir}
-              ></BookmarkCard>
-            </SwiperSlide>
-            <SwiperSlide>
-              <BookmarkCard
-                name="Kate"
-                date="2021"
-                image={Kate}
-                dir={dir}
-              ></BookmarkCard>
-            </SwiperSlide>
-            <SwiperSlide>
-              <BookmarkCard
-                name="Kate"
-                date="2021"
-                image={Kate}
-                dir={dir}
-              ></BookmarkCard>
-            </SwiperSlide>
-            <SwiperSlide>
-              <BookmarkCard
-                name="Kate"
-                date="2021"
-                image={Kate}
-                dir={dir}
-              ></BookmarkCard>
-            </SwiperSlide>
+            {TopRatedMovie.map((item, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <BookmarkCard props={item} dir={dir}></BookmarkCard>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </div>
         <div className="col-span-2 bg-gray-300 dark:bg-[#1A171E] flex-col p-5">
@@ -181,15 +183,6 @@ export default function Dashboard() {
             slidesPerView="auto"
             freeMode={true}
             breakpoints={{
-              320: {
-                slidesPerView: 1,
-              },
-              425: {
-                slidesPerView: 1,
-              },
-              640: {
-                slidesPerView: 1,
-              },
               768: {
                 slidesPerView: 1,
               },
@@ -250,7 +243,7 @@ export default function Dashboard() {
           <Title title="Recent Download" dir={dir}></Title>
           <Title title="Bookmarked" dir={dir}></Title>
 
-          <BookmarkCard name="Kate" date="2021" image={Kate}></BookmarkCard>
+          <BookmarkCard props={TopRatedMovie[0]}></BookmarkCard>
         </div>
       </div>
     </>
