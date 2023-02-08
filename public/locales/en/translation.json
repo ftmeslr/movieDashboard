@@ -14,11 +14,19 @@
   "Series": "Series",
   "Tv Shows": "Tv Shows",
   "See all": "See all",
-  "Action": "Action",
   "Recent Download": "Recent Download",
   "GENRE": "GENRE",
   "MENU": "MENU",
   "LIBRARY": "LIBRARY",
   "Whatch now": "Whatch now",
-  "Raiting" : "Raiting"
+  "Raiting": "Raiting",
+  "Action": "Action",
+  "Comedy": "Comedy",
+  "Historical": "Historical",
+  "Romance": "Romance",
+  "Drama": "Drama",
+  "Crime": "Crime",
+  "Adventure": "Adventure",
+  "Horror": "Horror",
+  "Document": "Document"
 }

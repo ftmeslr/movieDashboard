@@ -14,11 +14,19 @@
   "Series": "سریال ها ",
   "Tv Shows": "برنامه تلوزیونی",
   "See all": "مشاهده همه",
-  "Action": "عمل",
+  "Action": "اکشن",
   "Recent Download": "دانلود های اخیر",
   "GENRE": "ژانر",
   "MENU": "منو",
   "LIBRARY": "کتابخانه",
   "Whatch now": "مشاهده",
-  "Raiting": "رتبه"
+  "Raiting": "رتبه",
+  "Comedy": "کمدی",
+  "Historical": "تاریخی",
+  "Romance": "عاشقانه",
+  "Drama": "درام",
+  "Crime": "جنایی",
+  "Adventure": "ماجراجویی",
+  "Horror": "ترسناک",
+  "Document": "مستند"
 }

@@ -14,10 +14,13 @@ import MovieCard from "../components/MovieCard.jsx";
 import Navbar from "../components/Navbar.jsx";
 import Title from "../components/Title.jsx";
 import SearchInput from "../components/SearchInput.jsx";
+import TagCard from "../components/TagCard.jsx";
 import "swiper/css";
-import { ArrowDown2, TickCircle } from "iconsax-react";
+import { ArrowDown2 } from "iconsax-react";
+import { useState } from "react";
 export default function Dashboard() {
   const logos = [Netflix, Hulu, TvPlus, Disney, Hbo];
+
   const trendingMovie = [
     {
       name: "Army of the dead",
@@ -67,10 +70,24 @@ export default function Dashboard() {
       image: Kate,
     },
   ];
+  const Ganre = [
+    "Action",
+    "Comedy",
+    "Historical",
+    "Romance",
+    "Drama",
+    "Crime",
+    "Adventure",
+    "Horror",
+    "Document",
+    "Adventure",
+  ];
   const { t, i18n } = useTranslation();
   document.body.dir = i18n.dir();
   const dir = i18n.dir();
 
+  const [activeTag, setActiveTag] = useState(Ganre[0]);
+  console.log(activeTag);
   return (
     <>
       <div className="grid grid-cols-12 flex-row bg-red-200 font-dana ">
@@ -185,43 +202,44 @@ export default function Dashboard() {
           >
             <SwiperSlide>
               <div className="flex-col mt-5 ">
-                <div className="rounded-full px-3 flex items-center justify-between w-full bg-gray-200 dark:bg-[#0d0d0f] h-[38px] dark:text-[#fff] pl-6 mt-2">
-                  <p className="mb-1">Action</p>
-                  <TickCircle size="20" color="#fff" />
-                </div>
-                <div className="rounded-full px-3 flex items-center justify-between w-full bg-gray-200 dark:bg-[#0d0d0f] h-[38px] dark:text-[#fff] pl-6 mt-2">
-                  <p className="mb-1">Action</p>
-                  <TickCircle size="20" color="#fff" />
-                </div>
-                <div className="rounded-full px-3 flex items-center justify-between w-full bg-gray-200 dark:bg-[#0d0d0f] h-[38px] dark:text-[#fff] pl-6 mt-2">
-                  <p className="mb-1">Action</p>
-                  <TickCircle size="20" color="#fff" />
-                </div>
-                <div className="rounded-full px-3 flex items-center justify-between w-full bg-gray-200 dark:bg-[#0d0d0f] h-[38px] dark:text-[#fff] pl-6 mt-2">
-                  <p className="mb-1">Action</p>
-                  <TickCircle size="20" color="#fff" />
-                </div>
+                {Ganre.map((item, index) => {
+                  return (
+                    index < 5 && (
+                      <div onClick={() => setActiveTag(item)}>
+                        <TagCard
+                          key={index}
+                          name={item}
+                          className={
+                            activeTag === item
+                              ? "bg-red-500 dark:bg-red-500"
+                              : "bg-gray-200 dark:bg-[#0d0d0f]"
+                          }
+                        />
+                      </div>
+                    )
+                  );
+                })}
               </div>
             </SwiperSlide>
-
             <SwiperSlide>
               <div className="flex-col mt-5">
-                <div className="rounded-full px-3 flex items-center justify-between w-full bg-gray-200 dark:bg-[#0d0d0f] h-[38px] dark:text-[#fff] h-[38px]  pl-6 mt-2">
-                  <p className="mb-1">Action</p>
-                  <TickCircle size="20" color="#fff" />
-                </div>
-                <div className="rounded-full px-3 flex items-center justify-between w-full bg-gray-200 dark:bg-[#0d0d0f] h-[38px] dark:text-[#fff] h-[38px]  pl-6 mt-2">
-                  <p className="mb-1">Action</p>
-                  <TickCircle size="20" color="#fff" />
-                </div>
-                <div className="rounded-full px-3 flex items-center justify-between w-full bg-gray-200 dark:bg-[#0d0d0f] h-[38px] dark:text-[#fff] h-[38px] pl-6 mt-2">
-                  <p className="mb-1">Action</p>
-                  <TickCircle size="20" color="#fff" />
-                </div>
-                <div className="rounded-full px-3 flex items-center justify-between w-full bg-gray-200 dark:bg-[#0d0d0f] h-[38px] dark:text-[#fff] h-[38px]  F pl-6 mt-2">
-                  <p className="mb-1">Action</p>
-                  <TickCircle size="20" color="#fff" />
-                </div>
+                {Ganre.map((item, index) => {
+                  return (
+                    index >= 5 && (
+                      <div onClick={() => setActiveTag(item)}>
+                        <TagCard
+                          key={index}
+                          name={item}
+                          className={
+                            activeTag === item
+                              ? "bg-red-500 dark:bg-red-500"
+                              : "bg-gray-200 dark:bg-[#0d0d0f]"
+                          }
+                        />
+                      </div>
+                    )
+                  );
+                })}
               </div>
             </SwiperSlide>
           </Swiper>
