@@ -6,6 +6,12 @@ import Hbo from ".././asssets/images/hbo.png";
 import BookmarkCard from "../components/BookmarkCard.jsx";
 import Kate from "../asssets/images/kate-2021.jpg";
 import Avatar from "../asssets/images/avatar.jpg";
+import LastButtol from "../asssets/images/lastButtol.jpg";
+import Mosul from "../asssets/images/mosul.jpg";
+import redNotice from "../asssets/images/red-notice.jpg";
+import Sas from "../asssets/images/sas.jpg";
+import Army from "../asssets/images/army.jpg";
+import Blood from "../asssets/images/blood.jpg";
 import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import MiniSideBar from "../components/MiniSideBar.jsx";
@@ -18,6 +24,8 @@ import TagCard from "../components/TagCard.jsx";
 import "swiper/css";
 import { ArrowDown2 } from "iconsax-react";
 import { useState } from "react";
+import VidedCard from "../components/VideoCard.jsx";
+import Gunpow from "../asssets/images/gunpow.jpg";
 export default function Dashboard() {
   const logos = [Netflix, Hulu, TvPlus, Disney, Hbo];
 
@@ -26,16 +34,19 @@ export default function Dashboard() {
       name: "Army of the dead",
       date: "2021",
       rate: "7.9",
+      img: Army,
     },
     {
       name: "Gunpowder milkshake",
       date: "2021",
       rate: "7.5",
+      img: Gunpow,
     },
     {
       name: "Army of the dead",
       date: "2023",
       rate: "7.9",
+      img: Army,
     },
   ];
   const TopRatedMovie = [
@@ -49,13 +60,13 @@ export default function Dashboard() {
       name: "Mosul",
       date: "2019",
       rate: "7.1",
-      image: Kate,
+      image: Mosul,
     },
     {
       name: "Spider man",
       date: "2017",
       rate: "7.9",
-      image: Kate,
+      image: Mosul,
     },
     {
       name: "Bright",
@@ -68,6 +79,28 @@ export default function Dashboard() {
       date: "2021",
       rate: "7.9",
       image: Kate,
+    },
+  ];
+  const VideoWhatching = [
+    {
+      name: "Red notice",
+      date: "2021",
+      image: redNotice,
+    },
+    {
+      name: "SAS:Red notice",
+      date: "2019",
+      image: Sas,
+    },
+    {
+      name: "BloodShot",
+      date: "2017",
+      image: Blood,
+    },
+    {
+      name: "BloodShot",
+      date: "2012",
+      image: redNotice,
     },
   ];
   const Ganre = [
@@ -87,17 +120,20 @@ export default function Dashboard() {
   const dir = i18n.dir();
 
   const [activeTag, setActiveTag] = useState(Ganre[0]);
-  console.log(activeTag);
   return (
     <>
-      <div className="grid grid-cols-12 flex-row bg-red-200 font-dana  ">
+      <div
+        className={`grid grid-cols-12 flex-row bg-red-200   ${
+          dir === "ltr" ? " " : "font-dana"
+        }`}
+      >
         <div className="col-span-3 flex bg-gray-200 dark:bg-[#0d0d0f] h-auto">
           <MiniSideBar logos={logos} dir={dir}></MiniSideBar>
           <Menu dir={dir}></Menu>
         </div>
         <div
           className={`col-span-7 bg-gray-200 dark:bg-[#0d0d0f] px-5 ${
-            dir === "ltr" ? "-ml-12" : "-mr-12"
+            dir === "ltr" ? "-ml-32" : "-mr-32"
           }`}
         >
           <Navbar dir={dir}></Navbar>
@@ -119,7 +155,7 @@ export default function Dashboard() {
               },
 
               1536: {
-                slidesPerView: 2.5,
+                slidesPerView: 1.8,
               },
             }}
           >
@@ -127,6 +163,36 @@ export default function Dashboard() {
               return (
                 <SwiperSlide key={index}>
                   <MovieCard props={item} dir={dir}></MovieCard>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+          <Title title="Continue watching" dir={dir}></Title>
+          <Swiper
+            className="w-full mySwiper"
+            spaceBetween={20}
+            slidesPerView="auto"
+            freeMode={true}
+            breakpoints={{
+              768: {
+                slidesPerView: 1,
+              },
+              1024: {
+                slidesPerView: 1.5,
+              },
+              1280: {
+                slidesPerView: 2,
+              },
+
+              1536: {
+                slidesPerView: 2.3,
+              },
+            }}
+          >
+            {VideoWhatching.map((item, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <VidedCard props={item}></VidedCard>
                 </SwiperSlide>
               );
             })}
@@ -169,7 +235,7 @@ export default function Dashboard() {
               src={Avatar}
               alt="image slide 1"
             />
-            <div className="flex-col ml-3">
+            <div className="flex-col mx-3">
               <p className="font-bold dark:text-[#fff]">Arman Rokni</p>
               <p className=" text-[#8B8D94] text-xs">armanrokni@gmail.com</p>
             </div>
@@ -209,11 +275,7 @@ export default function Dashboard() {
                         <TagCard
                           key={index}
                           name={item}
-                          className={
-                            activeTag === item
-                              ? "bg-red-500 dark:bg-red-500"
-                              : "bg-gray-200 dark:bg-[#0d0d0f]"
-                          }
+                          toggle={activeTag === item ? true : false}
                         />
                       </div>
                     )
@@ -230,11 +292,7 @@ export default function Dashboard() {
                         <TagCard
                           key={index}
                           name={item}
-                          className={
-                            activeTag === item
-                              ? "bg-red-500 dark:bg-red-500"
-                              : "bg-gray-200 dark:bg-[#0d0d0f]"
-                          }
+                          toggle={activeTag === item ? true : false}
                         />
                       </div>
                     )

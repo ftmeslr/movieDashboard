@@ -1,15 +1,17 @@
 import { useTranslation } from "react-i18next";
-import { TickCircle } from "iconsax-react";
-import { useState } from "react";
+import { TickCircle, Add } from "iconsax-react";
 
-const TagCard = ({ name, className }) => {
+const TagCard = ({ name, toggle }) => {
   const { t } = useTranslation();
   return (
     <div
-      className={`rounded-full px-3 flex items-center justify-between w-full  h-[38px] dark:text-[#fff] pl-6 mt-2 cursor-pointer ${className}`}
+      className={`rounded-full px-3 flex items-center justify-between w-full  h-[38px] dark:text-[#fff] pl-6 mt-2 cursor-pointer ${
+        toggle ? "bg-red-500 dark:bg-red-500 " : "bg-gray-200 dark:bg-[#0d0d0f]"
+      }`}
     >
-      <p className="mb-1">{t(`${name}`)}</p>
-      <TickCircle size="20" color="#fff" />
+      <p className="mt-[1px]">{t(`${name}`)}</p>
+      {toggle && <TickCircle size="20" color="#fff" />}
+      {!toggle && <Add size="20" color="#fff" />}
     </div>
   );
 };
