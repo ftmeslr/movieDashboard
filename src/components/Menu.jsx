@@ -129,7 +129,7 @@ const MenueItem = ({ title, activeMenue, setActiveMenue, icon }) => {
       onClick={() => setActiveMenue(title)}
     >
       <div
-        className={`absolute bg-[#e40712] w-1 h-6 rounded-l-lg right-[-20px] ${
+        className={`absolute bg-[#e40712] w-1 h-6 rounded-l-lg right-[18px] ${
           activeMenue === title ? "" : "hidden"
         } `}
       ></div>

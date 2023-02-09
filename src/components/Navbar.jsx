@@ -25,22 +25,21 @@ const Navbar = ({ dir }) => {
                 className="form-select appearance-none
                         block
                         w-full
-                        px-3
-                        py-1.5
+                        px-4
+                        pb-1
                         text-base
                         font-normal
                         text-[#fff]
-                        bg-stone-700
-                        border border-solid border-gray-300
+                        dark:bg-stone-700
+                        bg-stone-200
                         rounded
                         transition
                         ease-in-out
-                        m-0
                         focus: focus:outline-none"
                 aria-label="Default select example"
               >
-                <option value="fa">Fa</option>
-                <option value="en">En</option>
+                <option value="en">en</option>
+                <option value="fa">fa</option>
               </select>
             </div>
           </div>
