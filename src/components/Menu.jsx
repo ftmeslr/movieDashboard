@@ -85,8 +85,8 @@ const Menue = () => {
     "Help",
   ];
   return (
-    <div className=" bg-gray-300 dark:bg-[#1a171e] grow text-zinc-700 px-5 max-w-[250px] ">
-      <div className="mt-20">
+    <div className=" bg-gray-300 dark:bg-[#1a171e] grow text-zinc-700 px-5  ">
+      <div className="mt-20 max-w-[280px]">
         <p className="text-xs">{t("MENU")}</p>
         <ul>
           {menueItems.map((item, index) => {

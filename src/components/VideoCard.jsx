@@ -1,13 +1,13 @@
 import React, { useRef, useState } from "react";
-import Army from "../asssets/images/army.jpg";
+import difultCover from "../asssets/images/army.jpg";
 import { ArrowRight2, Pause } from "iconsax-react";
 
-const VidedCard = ({ props }) => {
+const VidedCard = ({ props, height }) => {
   const { name, date, image } = props;
 
   return (
     <div className="relative rounded-full">
-      <Video image={image}>
+      <Video image={image} height={height}>
         <source src="/video-example.webm" type="video/webm" />
         <source src="/video-example.mp4" type="video/mp4" />
       </Video>
@@ -23,7 +23,7 @@ const VidedCard = ({ props }) => {
 const src =
   "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4";
 
-const Video = ({ image }) => {
+const Video = ({ image, height }) => {
   const videoRef = useRef();
   const [progress, setProgress] = useState(0);
   const [togglePlay, setTogglePlay] = useState(false);
@@ -44,7 +44,7 @@ const Video = ({ image }) => {
   };
 
   return (
-    <div class="rounded-full">
+    <div className={`rounded-full ${`h-[${height}]`} `}>
       {!togglePlay && (
         <button
           className="backdrop-blur-lg bg-gray-400 absolute top-0 left-0 right-0 bottom-0 m-auto z-10 rounded-full w-12 h-12 opacity-90"
@@ -69,7 +69,7 @@ const Video = ({ image }) => {
       <video
         poster={image}
         width="100%"
-        className="relative rounded-xl"
+        className={`relative rounded-xl object-cover ${`h-[${height}]`}`}
         onProgress={handleProgress}
         height="500"
         ref={videoRef}

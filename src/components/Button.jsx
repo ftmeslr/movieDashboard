@@ -7,11 +7,11 @@ const Button = ({ dir }) => {
   return (
     <div className="button flex items-center justify-between ">
       <div
-        className={`flex items-center  w-[100px] h-[40px] bg-[#e91a23] rounded-full opacity-70 cursor-pointer ${
+        className={`flex items-center  w-[120px] h-[44px] bg-[#e91a23] rounded-full opacity-70 cursor-pointer ${
           dir === "ltr" ? "mr-2" : "ml-2"
         }`}
       >
-        <p className="text-sm m-auto font-semibold text-[#fff] ">
+        <p className="text-sm m-auto text-[#fff] font-bold">
           {t("Whatch now")}
         </p>
       </div>

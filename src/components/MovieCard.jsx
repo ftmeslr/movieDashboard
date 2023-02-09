@@ -6,10 +6,10 @@ const MovieCard = ({ props, dir }) => {
   const { img, name } = props;
   const { t } = useTranslation();
   return (
-    <div className="w-full h-80 rounded-lg relative">
-      <div className="w-full h-80 bg-gradient-to-t from-neutral-800 to-transparent absolute -z-40 absolute rounded-lg"></div>
+    <div className="w-full h-[290px] rounded-lg relative">
+      <div className="w-full h-[290px] bg-gradient-to-t from-neutral-800 to-transparent absolute -z-40 absolute rounded-lg"></div>
       <img
-        className=" h-[320px] w-full rounded-lg absolute -z-50"
+        className=" h-[290px] w-full rounded-lg absolute -z-50"
         src={img}
         alt="image slide 1"
       />

@@ -133,7 +133,7 @@ export default function Dashboard() {
         </div>
         <div
           className={`col-span-7 bg-gray-200 dark:bg-[#0d0d0f] px-5 ${
-            dir === "ltr" ? "-ml-32" : "-mr-32"
+            dir === "ltr" ? "-ml-28" : "-mr-28"
           }`}
         >
           <Navbar dir={dir}></Navbar>
@@ -155,7 +155,7 @@ export default function Dashboard() {
               },
 
               1536: {
-                slidesPerView: 1.8,
+                slidesPerView: 2.1,
               },
             }}
           >
@@ -185,7 +185,7 @@ export default function Dashboard() {
               },
 
               1536: {
-                slidesPerView: 2.3,
+                slidesPerView: 2.6,
               },
             }}
           >
@@ -302,6 +302,12 @@ export default function Dashboard() {
             </SwiperSlide>
           </Swiper>
           <Title title="Recent Download" dir={dir}></Title>
+          <VidedCard
+            props={VideoWhatching[0]}
+            dir={dir}
+            height="200px"
+          ></VidedCard>
+
           <Title title="Bookmarked" dir={dir}></Title>
 
           <BookmarkCard props={TopRatedMovie[0]}></BookmarkCard>
