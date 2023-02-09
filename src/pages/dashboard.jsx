@@ -192,7 +192,7 @@ export default function Dashboard() {
             {VideoWhatching.map((item, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <VidedCard props={item}></VidedCard>
+                  <VidedCard props={item} height="500"></VidedCard>
                 </SwiperSlide>
               );
             })}
@@ -305,7 +305,7 @@ export default function Dashboard() {
           <VidedCard
             props={VideoWhatching[0]}
             dir={dir}
-            height="200px"
+            height="300"
           ></VidedCard>
 
           <Title title="Bookmarked" dir={dir}></Title>

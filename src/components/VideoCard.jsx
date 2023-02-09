@@ -44,7 +44,7 @@ const Video = ({ image, height }) => {
   };
 
   return (
-    <div className={`rounded-full ${`h-[${height}]`} `}>
+    <div className={`rounded-full `}>
       {!togglePlay && (
         <button
           className="backdrop-blur-lg bg-gray-400 absolute top-0 left-0 right-0 bottom-0 m-auto z-10 rounded-full w-12 h-12 opacity-90"
@@ -69,9 +69,9 @@ const Video = ({ image, height }) => {
       <video
         poster={image}
         width="100%"
-        className={`relative rounded-xl object-cover ${`h-[${height}]`}`}
+        className={`relative rounded-xl object-cover h-[238px]`}
         onProgress={handleProgress}
-        height="500"
+        height={height}
         ref={videoRef}
       >
         <source src={src} type="video/mp4" />
