@@ -39,8 +39,8 @@ const Video = ({ image, height }) => {
   const handleProgress = (e) => {
     if (isNaN(e.target.duration)) return;
     setProgress((e.target.currentTime / e.target.duration) * 100);
-    console.log(progress);
-    console.log(e.target.duration / 3600);
+    // console.log(progress);
+    // console.log(e.target.duration / 3600);
   };
 
   return (
@@ -80,7 +80,7 @@ const Video = ({ image, height }) => {
         className="absolute bottom-4 left-0 right-0 m-auto w-[90%] h-1 rounded-full"
         id="progress"
         max="100"
-        value="40"
+        value={progress}
       ></progress>
     </div>
   );
