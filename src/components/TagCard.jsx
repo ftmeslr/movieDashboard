@@ -11,7 +11,7 @@ const TagCard = ({ name, toggle }) => {
     >
       <p className="mt-[1px]">{t(`${name}`)}</p>
       {toggle && <TickCircle size="20" color="#fff" />}
-      {!toggle && <Add size="20" color="#fff" />}
+      {!toggle && <Add size="20" color="#95989f" />}
     </div>
   );
 };

@@ -34,7 +34,7 @@ const MiniSideBar = ({ logos, dir }) => {
         <Add
           className="m-auto d-block absolute left-0 right-0 bottom-0 top-0 cursor-pointer"
           size="24"
-          color="#fff"
+          color="#95989f"
         />
       </div>
     </div>

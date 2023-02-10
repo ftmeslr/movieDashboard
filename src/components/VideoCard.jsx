@@ -80,7 +80,7 @@ const Video = ({ image, height }) => {
         className="absolute bottom-4 left-0 right-0 m-auto w-[90%] h-1 rounded-full"
         id="progress"
         max="100"
-        value={progress}
+        value="40"
       ></progress>
     </div>
   );

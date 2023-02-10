@@ -8,7 +8,7 @@ const Navbar = ({ dir }) => {
     i18n.changeLanguage(e.target.value);
   };
   return (
-    <div className="tabs py-5 border-b-2 border-gray-800 flex justify-between">
+    <div className="tabs py-5 border-b-2 border-gray-400 flex justify-between">
       <ul className="flex dark:text-white mt-2">
         <li className="cursor-pointer">{t("Movies")}</li>
         <li className={`cursor-pointer ${dir === "ltr" ? "mx-8" : "mx-8"}`}>
@@ -31,7 +31,7 @@ const Navbar = ({ dir }) => {
                         font-normal
                         text-[#fff]
                         dark:bg-stone-700
-                        bg-stone-200
+                        bg-[#95989f]
                         rounded
                         transition
                         ease-in-out

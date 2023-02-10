@@ -13,9 +13,10 @@ import {
   Setting2,
   InfoCircle,
   Home,
+  LoginCurve,
 } from "iconsax-react";
 
-const Menue = () => {
+const Menue = ({ dir }) => {
   const [activeMenue, setActiveMenue] = useState("Home");
   const { t } = useTranslation();
   const iconList = [
@@ -97,10 +98,11 @@ const Menue = () => {
                   activeMenue={activeMenue}
                   setActiveMenue={setActiveMenue}
                   icon={iconList[index]}
+                  dir={dir}
                 />
                 <div
                   className={`h-px bg-[#2f3137] m-auto ${
-                    index === 3 || index === 7 ? "w-34" : "hidden"
+                    index === 3 || index === 7 ? "w-[220px]" : "hidden"
                   } `}
                 ></div>
                 <p
@@ -113,6 +115,20 @@ const Menue = () => {
               </div>
             );
           })}
+          <MenueItem
+            className={"mt-72"}
+            title="Logout"
+            activeMenue={activeMenue}
+            setActiveMenue={setActiveMenue}
+            icon={
+              <LoginCurve
+                size="18"
+                color={`${activeMenue === "Logout" ? "#e91a23" : "#77787d"}`}
+                variant={`${activeMenue === "Logout" ? "Bold" : "Linear"}`}
+              />
+            }
+            dir={dir}
+          />
         </ul>
       </div>
     </div>
@@ -121,17 +137,28 @@ const Menue = () => {
 
 export default Menue;
 
-const MenueItem = ({ title, activeMenue, setActiveMenue, icon }) => {
+const MenueItem = ({
+  title,
+  activeMenue,
+  setActiveMenue,
+  icon,
+  dir,
+  className,
+}) => {
   const { t, i18n } = useTranslation();
   return (
     <li
-      className="my-5 flex items-center cursor-pointer relative"
+      className={`my-5 flex items-center cursor-pointer relative ${className}`}
       onClick={() => setActiveMenue(title)}
     >
       <div
-        className={`absolute bg-[#e40712] w-1 h-6 rounded-l-lg right-[18px] ${
+        className={`absolute bg-[#e40712] w-1 h-6  ${
           activeMenue === title ? "" : "hidden"
-        } `}
+        }  ${
+          dir === "ltr"
+            ? "rounded-l-lg right-[18px]"
+            : "rounded-r-lg right-[260px]"
+        }`}
       ></div>
       {icon}
       <span
